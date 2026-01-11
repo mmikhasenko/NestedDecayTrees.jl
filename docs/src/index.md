@@ -1,8 +1,8 @@
 ```@meta
-CurrentModule = DecayAngles
+CurrentModule = NestedDecayTrees
 ```
 
-# DecayAngles
+# NestedDecayTrees
 
-Documentation for [DecayAngles](https://github.com/mmikhasenko/DecayAngles.jl).
+Documentation for [NestedDecayTrees](https://github.com/mmikhasenko/NestedDecayTrees.jl).
 

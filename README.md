@@ -1,15 +1,14 @@
-# DecayAngles
+# NestedDecayTrees
 
-<!-- [![Stable Documentation](https://img.shields.io/badge/docs-stable-blue.svg)](https://mmikhasenko.github.io/DecayAngles.jl/stable) -->
-[![In development documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://mmikhasenko.github.io/DecayAngles.jl/dev)
-[![Build Status](https://github.com/mmikhasenko/DecayAngles.jl/workflows/Test/badge.svg)](https://github.com/mmikhasenko/DecayAngles.jl/actions)
-[![Test workflow status](https://github.com/mmikhasenko/DecayAngles.jl/actions/workflows/Test.yml/badge.svg?branch=main)](https://github.com/mmikhasenko/DecayAngles.jl/actions/workflows/Test.yml?query=branch%3Amain)
-[![Lint workflow Status](https://github.com/mmikhasenko/DecayAngles.jl/actions/workflows/Lint.yml/badge.svg?branch=main)](https://github.com/mmikhasenko/DecayAngles.jl/actions/workflows/Lint.yml?query=branch%3Amain)
-[![Docs workflow Status](https://github.com/mmikhasenko/DecayAngles.jl/actions/workflows/Docs.yml/badge.svg?branch=main)](https://github.com/mmikhasenko/DecayAngles.jl/actions/workflows/Docs.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/mmikhasenko/DecayAngles.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/mmikhasenko/DecayAngles.jl)
+<!-- [![Stable Documentation](https://img.shields.io/badge/docs-stable-blue.svg)](https://mmikhasenko.github.io/NestedDecayTrees.jl/stable) -->
+[![In development documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://mmikhasenko.github.io/NestedDecayTrees.jl/dev)
+[![Build Status](https://github.com/mmikhasenko/NestedDecayTrees.jl/workflows/Test/badge.svg)](https://github.com/mmikhasenko/NestedDecayTrees.jl/actions)
+[![Test workflow status](https://github.com/mmikhasenko/NestedDecayTrees.jl/actions/workflows/Test.yml/badge.svg?branch=main)](https://github.com/mmikhasenko/NestedDecayTrees.jl/actions/workflows/Test.yml?query=branch%3Amain)
+[![Docs workflow Status](https://github.com/mmikhasenko/NestedDecayTrees.jl/actions/workflows/Docs.yml/badge.svg?branch=main)](https://github.com/mmikhasenko/NestedDecayTrees.jl/actions/workflows/Docs.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/mmikhasenko/NestedDecayTrees.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/mmikhasenko/NestedDecayTrees.jl)
 [![BestieTemplate](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/JuliaBesties/BestieTemplate.jl/main/docs/src/assets/badge.json)](https://github.com/JuliaBesties/BestieTemplate.jl)
 
-**DecayAngles.jl** is a Julia package designed to simplify the calculation of angular observables and transformations for decay processes. The package provides a tree object stored in memory as a nested structure with templated info field for each node. The tree represent decay chains and facilitates the extraction and manipulation of angular information at each node. The design is flexible and efficient, enabling the computation of complex decay observables using recursive tree traversal and parent-child relationships between nodes.
+**NestedDecayTrees.jl** is a Julia package designed to simplify the calculation of angular observables and transformations for decay processes. The package provides a tree object stored in memory as a nested structure with templated info field for each node. The tree represent decay chains and facilitates the extraction and manipulation of angular information at each node. The design is flexible and efficient, enabling the computation of complex decay observables using recursive tree traversal and parent-child relationships between nodes.
 
 > [!WARNING]
 > More user-friendly representation of the multi-column trees is found with the table-compatible interface.
@@ -24,25 +23,29 @@
 
 ## Installation
 
-To install **DecayAngles.jl**, you can add the package via the Julia package manager:
+This package depends on `FourVectors.jl`, which is an unregistered package from GitHub:
 
-```julia
-] add https://github.com/yourusername/DecayAngles.jl
-```
-the package depends on a few none registered packages, they also need to be installed,
-```
-] add https://github.com/JuliaHEP/LorentzVectorBase.jl
-] add https://github.com/mmikhasenko/FourVectors.jl
-```
+- **If `Manifest.toml` is present** (as in this repository): The unregistered package will be automatically installed when you add `NestedDecayTrees.jl` to your environment, as the manifest includes the exact dependency information.
+  ```julia
+  using Pkg
+  Pkg.add(url="https://github.com/mmikhasenko/NestedDecayTrees.jl.git")
+  ```
+
+- **If using a different setup without the manifest**: You need to manually install `FourVectors.jl` before adding `NestedDecayTrees.jl`:
+  ```julia
+  using Pkg
+  Pkg.add(url="https://github.com/mmikhasenko/FourVectors.jl.git")
+  Pkg.add(url="https://github.com/mmikhasenko/NestedDecayTrees.jl.git")
+  ```
 
 ## Usage
 
 ### Basic Usage
 
-To start using **DecayAngles.jl**, you can create a tree structure to represent a decay chain and then perform operations on each node in the tree.
+To start using **NestedDecayTrees.jl**, you can create a tree structure to represent a decay chain and then perform operations on each node in the tree.
 
 ```julia
-using DecayAngles
+using NestedDecayTrees
 
 # Define a decay topology as a nested tuple structure
 topology = (1, (2, 3))
@@ -110,7 +113,7 @@ In this example, each node in `with_parent` contains a string showing the path f
 
 ## Development and Contribution
 
-We welcome contributions and feedback! Feel free to submit pull requests or issues on the [GitHub repository](https://github.com/mmikhasenko/DecayAngles.jl).
+We welcome contributions and feedback! Feel free to submit pull requests or issues on the [GitHub repository](https://github.com/mmikhasenko/NestedDecayTrees.jl).
 
 ---
 

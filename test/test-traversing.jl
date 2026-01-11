@@ -1,4 +1,4 @@
-using DecayAngles
+using NestedDecayTrees
 using Test
 using DataFrames
 
