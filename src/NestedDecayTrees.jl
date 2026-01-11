@@ -1,4 +1,4 @@
-module DecayAngles
+module NestedDecayTrees
 
 using AbstractTrees
 using Setfield

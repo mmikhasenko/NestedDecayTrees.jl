@@ -10,15 +10,15 @@ begin
 	using Pkg
 	Pkg.activate(mktempdir())
 	Pkg.add([
-		Pkg.PackageSpec(url="https://github.com/mmikhasenko/DecayAngles.jl"),
+		Pkg.PackageSpec(url="https://github.com/mmikhasenko/NestedDecayTrees.jl"),
 		Pkg.PackageSpec(url="https://github.com/JuliaHEP/LorentzVectorBase.jl"),
 		Pkg.PackageSpec(url="https://github.com/mmikhasenko/FourVectors.jl"),
 		Pkg.PackageSpec("DataFrames"),
 		Pkg.PackageSpec("LinearAlgebra"),
 		Pkg.PackageSpec("Parameters"),
 	])
-	using DecayAngles
-	using DecayAngles.AbstractTrees
+	using NestedDecayTrees
+	using NestedDecayTrees.AbstractTrees
 	using LinearAlgebra
 	using DataFrames
 	using FourVectors
