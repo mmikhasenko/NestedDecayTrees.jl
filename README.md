@@ -11,8 +11,9 @@
 **NestedDecayTrees.jl** is a Julia package designed to simplify the calculation of angular observables and transformations for decay processes. The package provides a tree object stored in memory as a nested structure with templated info field for each node. The tree represent decay chains and facilitates the extraction and manipulation of angular information at each node. The design is flexible and efficient, enabling the computation of complex decay observables using recursive tree traversal and parent-child relationships between nodes.
 
 > [!WARNING]
-> More user-friendly representation of the multi-column trees is found with the table-compatible interface.
-> Development will move towards [`DecayTreeDataFrames.jl`](https://github.com/mmikhasenko/DecayTreeDataFrames.jl), archiving this package.
+> The effort is overseeded by [InstructionalDecayTrees.jl](https://github.com/mmikhasenko/InstructionalDecayTrees.jl)
+> Other user-friendly representation of the multi-column trees is found with the table-compatible interface.
+> However, exploratory project [`DecayTreeDataFrames.jl`](https://github.com/mmikhasenko/DecayTreeDataFrames.jl) is also paused in favor of [InstructionalDecayTrees.jl](https://github.com/mmikhasenko/InstructionalDecayTrees.jl).
 
 
 ## Features
